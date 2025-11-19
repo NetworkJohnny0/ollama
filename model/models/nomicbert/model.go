@@ -35,6 +35,11 @@ type Options struct {
 	poolingType  pooling.Type
 	normalize    bool
 	ropeFreqBase float32
+
+	// MoE specific options (used by v2 / MoE models only)
+	numExperts      int
+	numExpertsUsed  int
+	moeEveryNLayers int
 }
 
 // Single Encoder Layer
